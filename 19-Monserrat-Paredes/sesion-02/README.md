@@ -8,6 +8,7 @@ Primera Solemne 04-06 (Conectar dos placas distintas)
 ## Github
 
 Open source: Fuente abierta https://oshwa.org/
+
 Guia rapida de uso: https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet
 https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 
@@ -17,7 +18,9 @@ https://docs.github.com/es/get-started/writing-on-github/getting-started-with-wr
 https://www.arduino.cc/en/software/#ide
 
 Todo lo que escribimos en Arduino es en lenguaje c++
+
 Bibliotecas adicionales:
+
 1. Administrador de Placas -> Placas Arduino Uno R4 (v1.5.3 o más reciente)
 2. Administrador de biblioteca -> ArduinoMQTTClient (v0.1.8 o más reciente)
 3. Administrador de biblioteca -> ArduinoGraphics (v1.1.4 o más reciente)
@@ -26,11 +29,17 @@ Bibliotecas adicionales:
 ## Arduino UNO R4 WIFI (nueva version)
 
 Placa: Microcontrolador, conector USB-C
+
 Software: Editor, donde corre la placa
+
 Lenguaje de programación: Dialecto del lenguaje C++
+
 setup(): Inicio, estado inicial y configurar entradas y salidas
+
 loop(): Bucle, Repetir infinito
+
 Configuración: Instrucciones
+
 Homebrew: Se creó para poder instalar cosas en la terminal del ordenador https://brew.sh/
 
 
