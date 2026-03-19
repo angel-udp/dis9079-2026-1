@@ -250,7 +250,7 @@ void loop() {
 }
 ```
 
-##### Páginas vistas en clases:**
+##### Páginas vistas en clases:
 
 - [pandoc](https://pandoc.org/)
 - [oshwa](https://oshwa.org/)
