@@ -1,6 +1,6 @@
-// ejemplo02Enviar
+// recibirArduino
 // placa se conecta a un servidor mosquitto
-// y envia mensaje al topic dis9079/20260323/led
+// y envia mensaje al topic
 // para ser recibido por una placa raspberry pi
 // y prender su led
 // basado en ejemplo de la biblioteca
@@ -11,6 +11,58 @@
 // importar bibliotecas
 #include <ArduinoMqttClient.h>
 #include <WiFiS3.h>
+
+const char *grupos[] = {
+    "aaron",
+    "grupo-01",
+    "grupo-02",
+    "grupo-03",
+    "grupo-04",
+    "grupo-05",
+    "grupo-06",
+    "grupo-07",
+    "grupo-08",
+    "grupo-09",
+    "grupo-10",
+    "grupo-11",
+    "mateo",
+};
+
+const char *arduinos[] = {
+    "arduinoAaron",
+    "arduino01",
+    "arduino02",
+    "arduino03",
+    "arduino04",
+    "arduino05",
+    "arduino06",
+    "arduino07",
+    "arduino08",
+    "arduino09",
+    "arduino10",
+    "arduino11",
+    "arduinoMateo",
+};
+
+const char *raspicos[] = {
+    "raspicoAaron",
+    "raspico01",
+    "raspico02",
+    "raspico03",
+    "raspico04",
+    "raspico05",
+    "raspico06",
+    "raspico07",
+    "raspico08",
+    "raspico09",
+    "raspico10",
+    "raspico11",
+    "raspicoMateo",
+};
+
+// cambiar por tu numero de grupo
+// yo soy 0, mateo es 12
+int numeroDeGrupo = 1;
 
 // importar archivo .h con claves
 #include "arduino_secrets.h"
@@ -23,12 +75,18 @@ MqttClient mqttClient(wifiClient);
 
 const char broker[] = "10.174.124.28";
 int port = 1883;
-const char topic[] = "dis9079/20260323/led";
+const char topic[] = "dis9079/20260323/grupo" + String(numeroDeGrupo);
 
+// intervalo de tiempo para enviar mensaje
+// medido en ms
 const long intervalo = 10000;
-unsigned long previousMillis = 0;
 
-int count = 0;
+// variable para guardar el momento en que se envio
+// el mensaje anterior
+unsigned long momentoAnterior = 0;
+
+// variable para recibir mensajes
+int numeroRecibido = 0;
 
 void setup()
 {
@@ -55,10 +113,11 @@ void setup()
 
   // ID del cliente
   // cada cliente debe tener una ID unica
-  mqttClient.setId("agustinaaceituno");
+  // este cliente es la placa arduino
+  mqttClient.setId(arduinos[numeroDeGrupo]);
 
   // autenticacion con username y clave
-  mqttClient.setUsernamePassword("agustinaaceituno", "dis9079");
+  mqttClient.setUsernamePassword(arduinos[numeroDeGrupo], "dis9079");
 
   Serial.print("tratando de conectarse al MQTT broker ");
   Serial.println(broker);

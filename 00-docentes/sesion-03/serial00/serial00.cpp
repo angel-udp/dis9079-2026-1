@@ -2,6 +2,54 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 
+const char *grupos[] = {
+    "aaron",
+    "grupo-01",
+    "grupo-02",
+    "grupo-03",
+    "grupo-04",
+    "grupo-05",
+    "grupo-06",
+    "grupo-07",
+    "grupo-08",
+    "grupo-09",
+    "grupo-10",
+    "grupo-11",
+    "mateo",
+};
+
+const char *arduinos[] = {
+    "arduinoAaron",
+    "arduino01",
+    "arduino02",
+    "arduino03",
+    "arduino04",
+    "arduino05",
+    "arduino06",
+    "arduino07",
+    "arduino08",
+    "arduino09",
+    "arduino10",
+    "arduino11",
+    "arduinoMateo",
+};
+
+const char *raspicos[] = {
+    "raspicoAaron",
+    "raspico01",
+    "raspico02",
+    "raspico03",
+    "raspico04",
+    "raspico05",
+    "raspico06",
+    "raspico07",
+    "raspico08",
+    "raspico09",
+    "raspico10",
+    "raspico11",
+    "raspicoMateo",
+};
+
 // mensajes
 const char *mensajes[] = {
     "hola ",
