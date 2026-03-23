@@ -12,7 +12,7 @@ En dos semanas más es la `solemne 1`
 
 Ver el primer capítulo de Monty Python
 
-Usaremos un nuevo microcontrolador, donde solo recibiremos mensajes y el Arduino Uno R4 solo enviaremos mensajes. 
+Usaremos un nuevo microcontrolador (Raspberry pi / Pico 2 W) donde solo recibiremos mensajes y el Arduino Uno R4 solo enviaremos mensajes. 
 
 ### Microcontrolador: Raspberry Pi Pico 2 W
 
