@@ -102,6 +102,7 @@ ID y Username (usuario)
 Se estaban usando como si fueran lo mismo -> Pero NO son lo mismo
 
 
+UDP -> User Datagram Protocol
 
 
 
