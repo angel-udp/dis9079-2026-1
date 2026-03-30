@@ -13,3 +13,11 @@ sudo: su (super user, admin) do (hacer) + rm  (remove) rf (recursivamente, force
 + username e ID no son lo mismo 
 + -c correr en mosquitto
 + -v moquitto piensa en voz alta
+
+---
+
+Se intentó hacer el ejercicio de enviar y recibir mensajes mediante el arduino con mqtt, pero hubieron problemas y se pudo lograr enviar mensajes pero no se recibían, por lo que se intentó arreglar pensando que era porque el Username y el ID eran lo mismo, pero al editarlo siguió sin funcionar, razón por la cual se utilizó inteligencia artifical para buscar soluciones pero luego de muchos intentos, tampoco funcionó.
+
+Mosquitto nos falló, por lo que se está tratando de hacer el ejercicio con otro protocolo, que en éste caso es UDP (no se llama así por Diego Portales)
+
+- Protocolo UDP (user datagram protocol): Éste protocolo también sirve para enviar mensajes, pero no le importa si éstos llegan o no, por lo que no es bueno para enviar audio ya que se necesita algo constante y preciso.
