@@ -29,3 +29,37 @@ lunes 30 marzo 2026
 ---
 
 - Mandar cosas raras desde el arduino a la raspberry pi y que el computador responda.
+
+---
+
+Código que genera un punto en la pantalla OLED SSD1306
+
+```cpp
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
+
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
+
+void setup() {
+  Wire.begin();
+
+  if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
+    while (true);
+  }
+
+  display.clearDisplay();
+
+  // Punto grande en la parte inferior
+  display.fillCircle(64, 55, 4, SSD1306_WHITE);
+  // (x, y, radio)
+
+  display.display();
+}
+
+void loop() {
+}
+```
