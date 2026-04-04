@@ -31,7 +31,8 @@ int contador = 0;
 // mantener las doble comillas, cambiar grupoXX segun tu nombre de grupo
 AdafruitIO_Feed *nombreFeed = io.feed("grupoXX");
 
-void setup() {
+void setup()
+{
 
   // prender la conexion serial
   // ojo con la velocidad de 115200 baud
@@ -52,7 +53,8 @@ void setup() {
   io.connect();
 
   // esperar la conexion
-  while (io.status() < AIO_CONNECTED) {
+  while (io.status() < AIO_CONNECTED)
+  {
     // imprimir un punto cada medio segundo
     // mientras se conecta
     Serial.print(".");
@@ -64,7 +66,8 @@ void setup() {
   Serial.println(io.statusText());
 }
 
-void loop() {
+void loop()
+{
 
   // esta linea es necesaria
   // al principio de loop()

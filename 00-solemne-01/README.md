@@ -137,3 +137,24 @@ este código es un ejemplo básico para enviar información a Adafruit IO, y es 
 si usan mi usuario y clave, les recomiendo que modifiquen el nombre del feed al que envían la información, para evitar que todos los grupos estén enviando información al mismo feed y se genere un caos de datos.
 
 también pueden usar su propia cuenta de Adafruit IO, si prefieren, pero recuerden que deben mantener sus credenciales en privado y no compartirlas ni subirlas a github.
+
+### sobre cómo actualizar el firmware de tu placa
+
+lo más probable es que cuando corras el código, y lo subas a tu placa, te aparezca un mensaje de error que diga algo como:
+
+```txt
+21:23:38.769 -> .....................................................conectando a Adafruit IOFirmware version 0.3.0 is outdated. Latest version is 0.5.2
+21:24:06.104 -> Please upgrade the WiFiS3 firmware!
+```
+
+esto significa que el firmware de tu placa está desactualizado y no es compatible con la versión de la biblioteca de Adafruit IO que estás usando.
+
+para actualizar el firmware de tu placa, debes seguir los siguientes pasos:
+
+1. en Arduino IDE ir al menú `Tools` y seleccionar `Firmware Updater`.
+2. en la ventana emergente seleccionar tu placa.
+3. hacer click en el botón `Check for Updates` para verificar si hay una actualización disponible.
+4. si hay una actualización disponible, hacer click en el botón `Update Firmware` para iniciar el proceso de actualización.
+5. esperar a que el proceso de actualización se complete, esto puede tardar varios minutos, así que ten paciencia y no desconectes tu placa durante el proceso.
+6. una vez que la actualización se complete, tu placa ya no tendrá el código que habías subido.
+7. vuelve a subirlo, y revisa que ya no te aparezca el mensaje de error sobre el firmware desactualizado.
