@@ -47,3 +47,35 @@ Como cuarto y último paso se nos indica escribir en el buscador "Adafruit IO Ar
 ## sobre artista, diseñadora o producto que usa electrónica o computación inalámbricas
 
 # MiMU Gloves - Imogen Heap
+
+Imogen Heap (09/12/1977) es una artista británica que inició su desarrollo musical al aprender piano en su casa cuando era adolescente, decidiendo en ese momento que quería dedicarse a una carrera musical. A lo largo de su carrera musical, ha logrado obtener bastantes reconocimientos a su nombre incluyendo dos Grammy's: uno por "Mejor Ingeniería Musical" para su álbum _"Elipse"_ y otro por su contribución en el álbum _"1989"_ de la artista Taylor Swift, en donde coescribió, cointerpretó y produjo la canción _"Clean"_ de dicho álbum, pero más allá de su carrera musical, Heap es pionera en la búsqueda de cruces entre la tecnología y la música, siendo conocida por desarrollar los **"MiMU Gloves"**.
+
+Los guantes MiMU fueron creados por un la artista Imogen Heap junto a un equipo de la "University of West England" el cual era encabezado por Tom Mitchell, especialista en tecnología de la música. Heap quería desarrollar formas en las cuales podía ser más expresiva y espontánea sobre el escenario, por lo cual había utilizado micrófonos inalámbricos en las muñecas en el pasado, pero sentía que faltaba el poder controlar la música de manera inalámbrica, razón por la cual se reunió el equipo que estaba compuesto por músicos, ingenieros, diseñadores textiles y desarrolladores de software.
+
+Los primeros prototipos de los guantes se crearon en base a las experimentaciones musicales de Heap y fueron probándose en presentaciones en directo, los cuales en su momento mostraban cables que se conectaban a más componentes que estaban al rededor del cuerpo para poder sostenerse como se puede ver en el siguiente video: <https://www.youtube.com/watch?v=ci-yB6EgVW4>. Eventualmente los guantes fueron teniendo sus actualizaciones y ahora tienen una forma mucho más compacta como lo podemos ver en la siguiente imagen:
+
+![Guantes MiMU](./imagenes/guantes-mimu.jpeg)
+(imagen rescatada de la página oficial de MiMU, no me pertenece)
+
+Para llegar al resultado que tenemos hoy, Mitchell modificó guantes de fibra óptica que en ese tiempo eran desarrollados para la industria de los video juegos, y los programó teniendo en cuenta los movimientos de Heap. En los guantes se encuentran unos chips que contienen acelerómetros y magnetómetros, los cuales son capaces de generar información precisa sobre la posición de las manos y la velocidad de éstas, incluyendo ocho sensores de flexión que pueden medir la curvatura de los dedos:
+
+- Pulgar
+- Índice proximal
+- Índice distal
+- Medio proximal
+- Medio distal
+- Anular proximal
+- Anular distal
+- Meñique
+
+Para usar los guantes crearon el software **Glover**, el cual se utiliza para componer y performar música utilizando el movimiento de los guantes MiMU.
+
+---
+
+### Fuentes
+
+- <https://mimugloves.com/documentation/mimu-gloves-overview/>
+- <https://itsoundsalternative.com/2025/01/17/imogen-heap/>
+- <https://www.bbc.com/mundo/noticias/2011/07/110714_tecnologia_guantes_musicales_nc>
+- <https://mimugloves.com/about/>
+- <https://mimugloves.com/glover/>
