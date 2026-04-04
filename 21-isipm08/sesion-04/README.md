@@ -23,6 +23,9 @@ lunes 30 marzo 2026
 + layer of communication OSI MODEL
 + Packet udp: mensajes entre canales
 + Tplinkwifi.net
++ "Hardware es lo que puedes tocar y software es lo que hace que el hardware sea útil"
++ Hardware:Componentes físicos tangibles de un sistema informático. ej; procesador CPU, memoria RAM, disco duro, tarjeta madre, monitor, teclado, mouse, cámara.
++ Software:Conjunto instrucciones, programas y reglas informáticas que le dicen al hardware que hacer, solo se pueden ver los resultados en la pnatalla ya que no es tangible. ej; sistemas operativos (windows, macOS, android, IOS), aplicaciones, firmware (código que vive dentro de arduino para controlar los pines)
   
 ## Referentes
 **Claude Shannon**
