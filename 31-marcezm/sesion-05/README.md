@@ -12,38 +12,32 @@ con mi user de github y luego un guion
 
 ### codigo para enviar datos
 
-#include <WiFiS3.h>
+// reemplazar por las credenciales de aaron
+// o por las de tu cuenta
+#define IO_USERNAME  "bla"
+#define IO_KEY       "bla"
+
+
+// reemplazar por nombre y clave de la wifi
+#define WIFI_SSID "bla"
+#define WIFI_PASS "bla"
+
+// comment out the following lines if you are using fona or ethernet
 #include "AdafruitIO_WiFi.h"
 
-#define WIFI_SSID "si"
-#define WIFI_PASS "mailo6192"
-
-#define IO_USERNAME  "
-#define IO_KEY       "
-
+#if defined(USE_AIRLIFT) || defined(ADAFRUIT_METRO_M4_AIRLIFT_LITE) ||         \
+    defined(ADAFRUIT_PYPORTAL)
+// Configure the pins used for the ESP32 connection
+#if !defined(SPIWIFI_SS) // if the wifi definition isnt in the board variant
+// Don't change the names of these #define's! they match the variant ones
+#define SPIWIFI SPI
+#define SPIWIFI_SS 10 // Chip select pin
+#define NINA_ACK 9    // a.k.a BUSY or READY pin
+#define NINA_RESETN 6 // Reset pin
+#define NINA_GPIO0 -1 // Not connected
+#endif
+AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS, SPIWIFI_SS,
+                   NINA_ACK, NINA_RESETN, NINA_GPIO0, &SPIWIFI);
+#else
 AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
-AdafruitIO_Feed *brillo = io.feed("nicolasvaldesgreve-potenciometro");
-
-int potPin = A0;
-
-void setup() {
-  Serial.begin(9600);
-  io.connect();
-
-  while(io.status() < AIO_CONNECTED) {
-    delay(500);
-  }
-}
-
-void loop() {
-  io.run();
-
-  int valor = analogRead(potPin);
-  int valorMap = map(valor, 0, 1023, 0, 100);
-
-  brillo->save(valorMap);
-
-  
-
-  delay(1000);
-}
+#endif
