@@ -1,13 +1,12 @@
-# grupo-xx
+# grupo 8
 
-## integrantes
+## Integrantes
 
-* nombre completo
-* nombre completo
-* nombre completo
+* Braulio Figueroa  **Github:** brauliofigueroa2001
+* Luisa Toro        **Github:** Luisaatoro9
 
 ## descripción del proyecto
-
+Lunes 06-04 comienzo proyecto :)
 ## materiales usados en solemne-01
 
 ## código usado con Adafruit IO
