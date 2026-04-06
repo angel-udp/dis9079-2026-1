@@ -19,3 +19,21 @@ studio drift fue fundado en 2007 en ámsterdam por lonneke gordijin y ralph naut
 + se conocieron en la academia de diseño de Eindhoven, mientras el mundo del diseño se enfocaba en muebles funcionales, ellos querían crear objetos que de cierta manera reaccionaran.
 + el nombre Drift refleja su intención de dejarse llevar por los procesos naturales. dicen que la tecnología ha avanzado tanto que ya no debería ser algo que usamos, sino algo con lo que coexistimos
 + empezaron con piezas pequeñas como Fragile Future (luces con dientes de leon reales), pero su ambición los llevó a querer intervenir el espacio público a escala masiva, lo que dio paso a sus proyectos de enjambres de drones 
+
+![imagenes](./imagenes/franchise-freedom.jpeg)
+
+## Franchise Freedom
+
+esta obra es el mejor ejemplo de computación inalámbrica, no hay una computadora central que le diga a cada dron exactamente dónde estar en cada segundo, lo que sería muy rigido.
+
+en cuanto a software utilizan esta inteligencia de enjambre, se basan en un algoritmo desarrollado originalmente por craig reynolds llamado Boids. cada dron tiene instalado un software que procesa tres vectores constantemente:
+
++ el chip calcula el centro de masa de los drones vecinos y trata de moverse hacia allá para no quedarse solo:(
++ el sensor inalámbrivo detecta hacia dónde miran los demas y ajusta su propia orientación
++ si un vecino se acerca demasiado (detectado por sensores de proximidad), la resistencia de los motores aumenta o disminuye para corregir la posición y evitar el choque
+
+encontré piezas clave para esta magia: 
+
++ primero está  el módulo de radio de baja latencia, usan frecuencias específicas (varias veces fuera del wifi común para evitar interferencias) que permiten que los drones hablen entre sí iles de veces por segundo
++ la unidad de medición inercial, un chip que combina acelerómetros y giroscopios. es lo que permite que el dron sepa si está inclinado, asegurando que el movimiento sea fluido y no tiemble
++ el microcontrolador de alta velocidad es el encargado de recibir los datos inalámbricos de los otros drones y deidir qué potencia enviarle a cada motor en tiempo real 
