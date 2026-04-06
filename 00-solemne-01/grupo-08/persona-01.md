@@ -6,6 +6,22 @@ investigaciones individuales
 
 - instalación adafruit io 4 de abril (sacado de mi bitácora)
 
+![instalacion](./imagenes/instalacionIndividual1.JPG)
+
+- primero descargamos la biblioteca de adafruit io en arduino
+
+![instalacion](./imagenes/instalacionIndividual2.JPG)
+
+- nos aparece que incluye todas estas opciones, debemos aceptar
+
+![instalacion](./imagenes/instalacionIndividual3.JPG)
+
+- así termina la instalación, luego creamos nuestra cuenta en Adafruit
+
+![cuenta](./imagenes/creandoCuentabraulio.JPG)
+
+
+
 
 
 
@@ -33,6 +49,10 @@ código con adafruit IO
 - adafruit IO también se puede utilizar con código, tienen librerías de CircuitPython, Arduino, Python y más, en nuestro caso utilizaremos las librerías para arduino, específicamente Adafruit IO Arduino
 
 (agregar un poco más de info general)
+
+AVANCES 6 DE ABRIL, SACADOS DE BITÁCORA CLASE 4
+
+
 
 **feeds, blocks y dashboards**
 
