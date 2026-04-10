@@ -37,7 +37,7 @@ El proyecto consiste en dos Arduino UNO R4 WIFI conectados a internet. El Arduin
 
 ## Código usado con Adafruit IO
 
-Para su funcionamiento fue necesaria la creación de 2 códigos distintos, cada uno con sus 
+Para su funcionamiento fue necesaria la creación de 2 códigos distintos: uno enfocado en utilizar un componente (potenciometro) para obtener información que es subida a una nube, y otro para poder recibir dicha información y permitir a la segunda parte mostrar una animación en el matriz de leds y emitir un sonido que varía según el volumen.
 
 ## Diagrama de flujo
 
@@ -324,7 +324,7 @@ void manejarVolumen(AdafruitIO_Data *dato) {
 }
 ```
 
-* Los archivos "config.h" fue modificado en las credenciales de la "cuenta de adafruit", a la par que fue probado con el internet del lid.
+* Los archivos tipo "config.h" fueron modificados en las credenciales de la "cuenta de adafruit" y se utilizó el internet del lid para su funcionamiento.
 
 ### Monitor Serial de Arduino
 ..................................................................................................
@@ -366,3 +366,5 @@ rellenar en el mismo orden que los integrantes del grupo
 * <https://learn.adafruit.com/series/adafruit-io-basics>
 * <https://github.com/adafruit/Adafruit_IO_Arduino>
 * <https://github.com/adafruit/Adafruit_IO_Arduino/blob/master/examples/adafruitio_01_subscribe/adafruitio_01_subscribe.ino>
+* <https://docs.arduino.cc/tutorials/uno-r4-wifi/wifi-examples/#wi-fi-udp-send-receive-string>
+* <https://forum.arduino.cc/t/ide-no-reconoce-puertos-com/353276>

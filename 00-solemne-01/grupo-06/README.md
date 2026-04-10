@@ -10,7 +10,7 @@
 
 ## Descripción del proyecto
 
-La idea principal de nuestro proyecto es poder enviar información desde una placa Arduino R4 WiFi a otra de manera inalámbrica utilizando WiFi, por lo cual haremos que una placa envíe la orden de encender y apagar un LED que está conectado a la otra placa mientras usamos a Adafruit IO como intermediario.
+La idea principal de nuestro proyecto es poder enviar información desde una placa Arduino R4 WiFi a otra de manera inalámbrica utilizando WiFi, por lo cual haremos que una placa envíe la orden de encender y apagar un LED que está conectado a la otra placa mediante una protoboard mientras usamos a Adafruit IO como intermediario.
 
 En este caso, los componentes que utilizamos son:
 
@@ -42,7 +42,22 @@ Luego, si presionábamos en el feed de ``brillo-led``, nos permitía ver un grá
 
 ## Sistema Enviar - Proyecto Final
 
+Como no logramos cambiar el valor del LED con el potenciómetro, decidimos descartar al potenciómetro y enfocarnos en poder controlar el LED mediante Adafruit IO, por lo que cambiamos el código y al momento de intentar subirlo nos salían muchos puntos y no lograba conectarse a Adafruit IO, por lo que revisamos si la placa estaba actualizada y cuando nos apareció la opción de dejarla en la versión más reciente (0.6.0), le dimos al botón de actualizar. Luego de esperar por unos minutos, nos empezamos a preocupar.
 
+![Actualizando placa Arduino UNO R4 WiFi](./imagenes/actualizando-arduino.jpeg)
+
+Cuando se dejó de actualizar, Arduino IDE dejó de reconocer la placa por lo que tuvimos que poner a mano que era una Arduino UNO R4 WiFi, pero de igual manera mandaba error y no cargaba el código porque no había ninguna "board" conectada. Cuando decidimos que tal vez era buena idea ir a pedir ayuda, recordamos que podíamos reiniciar la placa, por lo cual seguimos los siguientes pasos:
+
+1. Desconectar la placa del computador
+2. Mantener presionado el botón que está en la placa
+3. Mientras mantienes el botón, conecta la placa al computador
+4. Espera unos segundos y suelta el botón
+
+Luego de hacer eso, seleccionamos la placa en el Arduino IDE, subimos el código, y funcionó
+
+![La resurrección del Arduino](./imagenes/arduino-funcionando.jpeg)
+
+Después de solucionar el problema de la placa, subimos un código y no veíamos el cambio en el LED de la protoboard, pero sí en el de la placa de Arduino lo cual fue emocionante. Por un momento consideramos que eso era suficiente, pero de igual manera queríamos lograr prender y apagar un LED aparte del que estaba en la misma placa, por lo que volvimos a intentar con otro código y finalmente pudimos lograr enviar la señal de prender y apagar mediante Adafruit.
 
 ---
 
@@ -64,13 +79,7 @@ Cuando por fin subimos el código, nos salió un error en donde se menciona un p
 
 ![Error de puerto en Raspberry Pi Pico 2 W](./imagenes/error-arduinoide.jpeg)
 
-## Sistema Enviar - Proyecto Final
-
-
-
----
-
-## Aarón nos ayuda en el LID
+### Aarón nos ayuda en el LID
 
 Como no logramos solucionar el error del puerto, fuimos al LID a ver si alguien nos podía ayudar y nos encontramos a Aarón, por lo que le pedimos revisar cuál era el problema. Cuando le explicamos el problema, pidió ver primero el código que envía ya que eso era lo primero que teníamos que hacer funcionar, por lo que le mostramos lo que teníamos en Arduino IDE y nos corrigió el Key de Adafruit IO para que se pueda conectar bien, y aparte cambió el nombre del Feed a algo más formal que en este caso fue ``nicolasvaldesgreve-potenciador``, ya que así es más fácil identificar a la persona por el nombre de Github.
 
@@ -78,9 +87,8 @@ Como no logramos solucionar el error del puerto, fuimos al LID a ver si alguien 
 
 Luego conversar por un rato, llegamos a la conclusión de que en vez de usar un Raspberry Pi Pico 2 W podíamos usar otra Arduino UNO R4 WiFi, lo cual no sabíamos que era una opción pero nos alivió mucho ya que usar la Raspberry era un poco complicado tanto en Arduino IDE como en Visual Studio Code.
 
----
 
-## Prueba LED en sistema recibir
+## Sistema Recibir - Proyecto Final
 
 Para probar si respondía el Adafruit IO al LED con el código, unimos un LED junto a una resistencia de 220 Ω a la placa Arduino mediante cables Dupont, lo cual terminó viendose así:
 
@@ -99,6 +107,16 @@ Nos tiraba error ya que el "led" no estaba declarado, por lo que corregimos eso 
 ![Arreglo en declaración de LED](./imagenes/leddeclarado.jpeg)
 
 Al correr nuevamente el código no salió ningún error pero solo salía que estaba conectando a Adafruit y aparecían muchos puntitos, por lo que nunca logró conectarse en realidad.
+
+Cuando logramos volver a conectarnos a Adafruit IO luego de reiniciar la placa, corrimos nuevamente el código y no reaccionó el LED de la protoboard sino el LED de la placa Arduino, lo cual fue sorprendente pero no era lo que buscábamos. 
+
+Como no entendíamos cual era el problema, decidimos preguntar a la IA (ChatGPT) cuál podía ser el posible error, el cual nos dijo que no debíamos conectar el LED directamente a los 5V ya que esto no nos iba a permitir apagar el LED porque le estabamos dando poder de manera constante, por lo que le hicimos caso y cambiamos el cable Dupont al Pin 8 de la placa, y se veía así:
+
+![LED con cables bien puestos](./imagenes/led-bien-conectado.jpeg)
+
+Cuando probamos otro código, la placa se conectó a Adafruit IO y empezó a recibir la información de encendido y apagado los cuales se representaban como "1" el cual era encendido, y con "0" el cual era apagado.
+
+![Arduino recibiendo información 0-1 de Adafruit IO](./imagenes/arduino-recibiendo-info.jpeg)
 
 ---
 
@@ -243,9 +261,9 @@ void loop() {
 
 ---
 
-### Código para enviar
-
 Éste código lo conseguimos cuando estabamos intentando conseguir prender y apagar el LED de la protoboard, pero lo que logró fue prender y apagar el LED que está dentro del otro Arduino, por lo que decidimos dejarlo de igual manera ya que sirve y fue parte importante del proceso.
+
+### Código para enviar
 
 ```cpp
 #include <WiFiS3.h>
