@@ -30,14 +30,14 @@ Configuraciones que definen el comportamiento y contexto del feed
 
 La gestión de los feeds depende del método de interacción con la plataforma
 
-´Interacción mediante API (MQTT / REST)´
+`Interacción mediante API (MQTT / REST)`
 
 Para usuarios que desarrollan su propio código, la gestión es manual y granular.
 
 - **Regla:** Se debe crear un feed por cada origen de datos único.
 - **Ejemplo:** Un proyecto con un sensor de temperatura y dos de humedad requiere la creación de **tres feeds** distintos.
 
-´Uso con WipperSnapper (No-Code)´
+`Uso con WipperSnapper (No-Code)`
 
 Para usuarios que utilizan la plataforma de configuración sin código, la gestión es automatizada.
 
@@ -49,7 +49,7 @@ Para usuarios que utilizan la plataforma de configuración sin código, la gesti
 
 Los paneles de control son la interfaz visual de Adafruit IO que permite visualizar datos y controlar dispositivos en tiempo real.
 
-´Proceso de Creación´
+`Proceso de Creación`
 
 Pasos a seguir:
 
@@ -273,12 +273,12 @@ Es genial :)
 
 ## dificultades y aprendizajes 
 
-´Dificultades´
+`Dificultades`
 
 - Concretar qué queríamos realizar para la solemne, qué componentes agregar para que se nos hiciera curioso y didactico el aprendizaje.
 - Juntar la pantalla OLED en el código, para que se encienda y apague con las señales emitidas.
 
-´Aprendizajes´
+`Aprendizajes`
 
 - Las funciones de Adafruit IO y cómo implementarlas en el código.
 - Llave para colocar en el código en arduino
