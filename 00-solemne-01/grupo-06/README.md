@@ -118,6 +118,10 @@ Cuando probamos otro código, la placa se conectó a Adafruit IO y empezó a rec
 
 ![Arduino recibiendo información 0-1 de Adafruit IO](./imagenes/arduino-recibiendo-info.jpeg)
 
+
+![Conexión lograda luz led en protoboard](./imagenes/luzprotoboard-final.gif)
+
+
 ---
 
 ## Materiales usados en Solemne-01
