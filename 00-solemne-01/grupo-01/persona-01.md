@@ -81,7 +81,7 @@ io.run();
 
 Es para ver lo que manda el otro arduino en adafruit 
 
-```
+```cpp
 io.feed();
 ```
 
@@ -185,9 +185,9 @@ void loop()
 
 ### Conexión con Adafruit IO
 
-´´´cpp
+```cpp
 AdafruitIO_Feed *grupo01 = io.feed("grupo01");
-´´´
+```
 
 Se define un feed llamado "grupo01".
 
@@ -195,25 +195,25 @@ Este feed funciona como canal de comunicación, envío/recepción.
 
 ### Recepción de datos desde Adafruit IO
 
-´´´cpp
+```cpp
 void handleMessage(AdafruitIO_Data *data)
-´´´
+```
 
 Esta función se realiza cada vez que llega un dato desde el feed.
 
-´´´cpp
+```cpp
 String valor = data->value();
-´´´
+```
 
 Obtiene el valor enviado, en este caso ON/OFF.
 
-´´´cpp
+```cpp
 if(valor == "ON") {
   oledEncendida = true;
 } else {
   oledEncendida = false;
 }
-´´´
+```
 
 Controla el estado de la pantalla según el mensaje recibido.
 
