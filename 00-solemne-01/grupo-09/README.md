@@ -6,6 +6,7 @@
 • Marcela Zúñiga
 
 ## descripción del proyecto
+
 El proyecto consiste en crear un sistema de comunicación entre dos dispositivos electrónicos ubicados en distintos computadores, utilizando internet como medio de conexión a través de Adafruit IO.
 
 La idea principal es demostrar cómo funcionan el Internet de las Cosas (IoT): dispositivos que pueden enviar y recibir información en tiempo real sin estar conectados físicamente entre sí.
@@ -22,9 +23,10 @@ Adafruit IO los almacena y gestiona en la nube.
 El mismo Arduino lee esos datos desde el feed y actúa en consecuencia.
 
 ## materiales usados en solemne-01
-•1 placa de Arduino uno R4 
 
-•2 computadores 
+•1 placa de Arduino uno R4
+
+•2 computadores
 
 •Cable USB para conectar la placa
 
@@ -32,12 +34,10 @@ El mismo Arduino lee esos datos desde el feed y actúa en consecuencia.
 
 ### código para enviar
 
-```cpp
-
-
-```
 Creamos diferentes Feed y Dashboards en donde a base de pruebas y errores logramos que nos funcionara algo en donde el arduino puedo recibir un mensaje.
+
 <img width="1600" height="494" alt="image" src="https://github.com/user-attachments/assets/b6eefcbf-2ec7-4485-927e-68bd675789a6" />
+
 <img width="1600" height="622" alt="image" src="https://github.com/user-attachments/assets/7e66c203-c59c-4cfc-81de-36ee52197aa8" />
 
 ## proceso
@@ -52,16 +52,15 @@ Además, cometimos algunos errores en el código. Por ejemplo, en la contraseña
 
 <img width="1364" height="280" alt="Captura de pantalla 2026-04-10 171808" src="https://github.com/user-attachments/assets/03cb497b-328c-4b27-a2ee-dbb118e62056" />
 
-Al final, buscamos otra forma de enviar y recibir información. Para esto, en Adafruit agregamos un nuevo bloque de tipo “text”. 
+Al final, buscamos otra forma de enviar y recibir información. Para esto, en Adafruit agregamos un nuevo bloque de tipo “text”.
+
 <img width="1093" height="726" alt="image" src="https://github.com/user-attachments/assets/ab8a7542-fa8b-46b5-8e67-a638feefa600" />
 
 A partir de esto, trabajamos con otro código que fuimos ajustando hasta que finalmente logramos recibir datos en el Arduino. Marlen se encargó de enviar la información desde Adafruit y Marcela de recibirla desde el Arduino. Sin embargo, solo logramos recibir un mensaje, “ON”. Intentamos enviar también un “OFF”, pero este nunca llegó. Aun así, seguiremos ajustando el código, ya que estamos muy contentos de haber logrado al menos la recepción de un dato.
 
 <img width="1365" height="675" alt="Captura de pantalla 2026-04-10 183756" src="https://github.com/user-attachments/assets/b0ad36c3-a5ff-49c7-b800-f50b2473cf50" />
 
-
-https://github.com/user-attachments/assets/cc8b1825-d7d3-46d0-aa7d-2ac7c3fd2a4d
-
+<https://github.com/user-attachments/assets/cc8b1825-d7d3-46d0-aa7d-2ac7c3fd2a4d>
 
 También queremos mencionar que, al parecer, debido al internet, muchas veces no logramos conectarnos a Adafruit y el sistema quedaba cargando. En esos casos teníamos que desconectar y volver a conectar el Arduino, además de tener paciencia hasta que se reconectara nuevamente. Al principio nos asustamos, ya que estábamos usando el mismo código que antes sí funcionaba, pero dejó de conectar. Sin embargo, al final nos dimos cuenta de que el problema probablemente era solo la conexión a internet.
 
@@ -118,27 +117,22 @@ void loop() {
 }
 ```
 
-
-
-```
 ## investigaciones individuales
 
 rellenar en el mismo orden que los integrantes del grupo
 
-[persona-01.Marlen Soto ](./persona-01.md)
-[persona-02.Marcela Zúñiga](./persona-02.md)
+[persona-01.md](./persona-01.md)
+[persona-02.md](./persona-02.md)
 [persona-03.md](./persona-03.md)
 
 ## bibliografía
-•Adafruit Industries. (s.f.). Adafruit IO Basics: Feeds. Recuperado de https://learn.adafruit.com/adafruit-io-basics-feeds
 
-•Adafruit Industries. (s.f.). Adafruit IO Arduino. Recuperado de https://learn.adafruit.com/adafruit-io/arduino
+•Adafruit Industries. (s.f.). Adafruit IO Basics: Feeds. Recuperado de <https://learn.adafruit.com/adafruit-io-basics-feeds>
 
-•Arduino. (s.f.). Arduino Reference. Recuperado de https://www.arduino.cc/reference/en/
+•Adafruit Industries. (s.f.). Adafruit IO Arduino. Recuperado de <https://learn.adafruit.com/adafruit-io/arduino>
 
-•Arduino. (s.f.). WiFi Library. Recuperado de https://www.arduino.cc/en/Reference/WiFi
+•Arduino. (s.f.). Arduino Reference. Recuperado de <https://www.arduino.cc/reference/en/>
 
-•Adafruit Industries. (s.f.). Adafruit IO Arduino Library. Recuperado de https://github.com/adafruit/Adafruit_IO_Arduino
+•Arduino. (s.f.). WiFi Library. Recuperado de <https://www.arduino.cc/en/Reference/WiFi>
 
-
-
+•Adafruit Industries. (s.f.). Adafruit IO Arduino Library. Recuperado de <https://github.com/adafruit/Adafruit_IO_Arduino>
