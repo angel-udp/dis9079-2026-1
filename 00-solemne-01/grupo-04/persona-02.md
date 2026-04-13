@@ -1,4 +1,4 @@
-# persona-02
+# catalina salinas
 
 investigaciones individuales
 
