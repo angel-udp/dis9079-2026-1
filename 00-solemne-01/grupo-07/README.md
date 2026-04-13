@@ -167,7 +167,10 @@ rellenar en el mismo orden que los integrantes del grupo
 **Arduino libraries Adafruit IO** 
 
 https://docs.arduino.cc/libraries/adafruit-io-arduino/
-Github Adafruit IO https://github.com/adafruit/Adafruit_IO_Arduino
+
+**Github Adafruit IO** 
+
+https://github.com/adafruit/Adafruit_IO_Arduino
 
 **Adafruit IO basics color** 
 
