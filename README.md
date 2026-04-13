@@ -74,6 +74,18 @@ Conectarse con:
 * Username: `matbutom`
 * Password: `dis9079`
 
-## Bibliografía
+## Bibliografía obligatoria
 
-* <https://itp.nyu.edu/physcomp/>
+* Tim Pulver, Hands-On Internet of Things with MQTT, Packt Publishing, 2019.
+* Samuel Greengard, The Internet of Things, MIT Press, 2015.
+* Dhairya Parikh, Raspberry Pi and MQTT Essentials, Packt Publishing, 2022.
+* Claire Rowland et al, Designing Connected Products, O’Reilly Media, 2015.
+* Stefan Poslad, Ubiquitous Computing, Wiley, 2009.
+
+## Bibliografía complementaria
+
+* Paul Dourish, Where the Action Is, MIT Press, 2001.
+* Paul Dourish, The Stuff of Bits, MIT Press, 2022.
+* Michael Connor et al, The Art Happens Here: Net Art Anthology, Rhizome, 2019.
+* The Connectivity of Things: Network Cultures since 1832, MIT Press, 2024.
+* Edward Shanken, Systems, MIT Press, 2015.
