@@ -435,7 +435,7 @@ En estos clips mostramos cómo el sistema reacciona en tiempo real. Al cambiar e
 8. **Controlador Físico (Matriz 12x8):** Componente integrado en el Arduino UNO R4 que gestiona una cuadrícula de 96 LEDs (12x8). Utiliza técnicas de multiplexación para encender cada LED individualmente y formar gráficos o texto mediante código.
 9. **Hardware IoT:** Conjunto de dispositivos físicos (sensores, actuadores y microcontroladores) equipados con conectividad que permiten recolectar y transmitir datos a través de internet para interactuar con el mundo físico.
 
-## 📚 Bibliografía
+##  Bibliografía
 
 * Ardumania. (2025, 21 de noviembre). *Qué es el ESP32: características, funcionamiento y cómo aprovecharlo*.  
   <https://ardumania.es/que-es-el-esp32/>
