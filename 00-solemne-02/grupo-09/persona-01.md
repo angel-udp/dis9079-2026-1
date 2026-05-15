@@ -1,6 +1,6 @@
 # investigaciones individuales
 
-nombre completo / github
+Josefa Araya Cartes / josefa-kristina
 
 ## Sensor
 
