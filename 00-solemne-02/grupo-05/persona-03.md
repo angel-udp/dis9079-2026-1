@@ -28,7 +28,7 @@ Tanto la intensidad como el movimiento de la luz influyen en la composición son
 
 ![Sintetizador](./imagenes/sintetizador.png)
 
-
+Esta obra fue inspirada en el pensamiento de Martin Heidegger (1889 - 1976) sobre la tecnología como una forma de revelación y en el concepto del Deep Listening, desarrollado por Pauline Oliveros (1932 - 2016), por lo que la obra replantea la relación entre el ser humano y la máquina. El público pasa de ser un receptor pasivo a convertirse en co-creador de la obra.
 
 ### Fuentes Artista
 
