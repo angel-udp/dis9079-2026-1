@@ -23,6 +23,10 @@ En el caso de nosotros, ya se nos introdujo el LDR en el curso pero hemos trabaj
 
 Para poder conectar este sensor a una placa Arduino UNO R4 WiFi, se tiene que hacer las mismas conexiones que hacemos cuando conectamos un potenciómetro a éste, solo que en la fotorresistencia hay que poner el cable que va a los ``5V`` en un pin de éste, y en el otro poner el cable que va al ``9~`` al igual que una patita de resistencia mientras que en la otra se va el pin que va al ``GND`` de la placa misma.
 
+Los LDR se fabrican en diversos tipos, por lo que se pueden encontrar en distintos tipos de artículos como por ejemplo en cámaras, medidores de luz, relojes de radio, alarmas de seguridad o sistemas de encendido y apagado de la iluminación de las calles. También existe una variación que es directamente acoplable con una placa Arduino, el cual es éste:
+
+![LDR para Arduino](./imagenes/ldr-arduino.png)
+
 ### Fuentes Sensor
 
 + <https://www.mechatronicstore.cl/sensor-de-deteccion-de-luz-fotosensible-digital/?srsltid=AfmBOooyaVFpS7vgsjQ7xQU6gjCxzt0Uxd_LYXZL8HfRX2tP1_rhH5VT>
